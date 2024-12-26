@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "savekids",
+  "info": {
+    "singularName": "savekid",
+    "pluralName": "savekids",
+    "displayName": "Спасено детей"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "count": {
+      "type": "integer"
+    }
+  }
+}
