@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gallerykids",
+  "info": {
+    "singularName": "gallerykid",
+    "pluralName": "gallerykids",
+    "displayName": "Галлерея спасенных детей"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

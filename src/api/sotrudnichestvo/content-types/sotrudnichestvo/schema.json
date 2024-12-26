@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sotrudnichestvos",
+  "info": {
+    "singularName": "sotrudnichestvo",
+    "pluralName": "sotrudnichestvos",
+    "displayName": "Сотрудничество"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "countSlides": {
+      "type": "string"
+    }
+  }
+}

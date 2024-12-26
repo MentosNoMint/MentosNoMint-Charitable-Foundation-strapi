@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ivents",
+  "info": {
+    "singularName": "ivent",
+    "pluralName": "ivents",
+    "displayName": "Мероприятия"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "countSlides": {
+      "type": "string"
+    }
+  }
+}

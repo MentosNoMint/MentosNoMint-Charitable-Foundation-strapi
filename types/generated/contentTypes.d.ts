@@ -369,6 +369,122 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEmployeeEmployee extends Struct.CollectionTypeSchema {
+  collectionName: 'employees';
+  info: {
+    displayName: '\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438';
+    pluralName: 'employees';
+    singularName: 'employee';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::employee.employee'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    position: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGallerykidGallerykid extends Struct.CollectionTypeSchema {
+  collectionName: 'gallerykids';
+  info: {
+    displayName: '\u0413\u0430\u043B\u043B\u0435\u0440\u0435\u044F \u0441\u043F\u0430\u0441\u0435\u043D\u043D\u044B\u0445 \u0434\u0435\u0442\u0435\u0439';
+    pluralName: 'gallerykids';
+    singularName: 'gallerykid';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gallerykid.gallerykid'
+    > &
+      Schema.Attribute.Private;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIventIvent extends Struct.CollectionTypeSchema {
+  collectionName: 'ivents';
+  info: {
+    displayName: '\u041C\u0435\u0440\u043E\u043F\u0440\u0438\u044F\u0442\u0438\u044F';
+    pluralName: 'ivents';
+    singularName: 'ivent';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    countSlides: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ivent.ivent'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProjectProject extends Struct.CollectionTypeSchema {
+  collectionName: 'projects';
+  info: {
+    description: '';
+    displayName: '\u041F\u0440\u043E\u0435\u043A\u0442\u044B';
+    pluralName: 'projects';
+    singularName: 'project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    countSlides: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project.project'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSavekidSavekid extends Struct.SingleTypeSchema {
   collectionName: 'savekids';
   info: {
@@ -421,6 +537,37 @@ export interface ApiSlideSlide extends Struct.CollectionTypeSchema {
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
     shortDescription: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSotrudnichestvoSotrudnichestvo
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sotrudnichestvos';
+  info: {
+    displayName: '\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u043E';
+    pluralName: 'sotrudnichestvos';
+    singularName: 'sotrudnichestvo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    countSlides: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sotrudnichestvo.sotrudnichestvo'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -936,8 +1083,13 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::employee.employee': ApiEmployeeEmployee;
+      'api::gallerykid.gallerykid': ApiGallerykidGallerykid;
+      'api::ivent.ivent': ApiIventIvent;
+      'api::project.project': ApiProjectProject;
       'api::savekid.savekid': ApiSavekidSavekid;
       'api::slide.slide': ApiSlideSlide;
+      'api::sotrudnichestvo.sotrudnichestvo': ApiSotrudnichestvoSotrudnichestvo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
