@@ -4,7 +4,8 @@
   "info": {
     "singularName": "ivent",
     "pluralName": "ivents",
-    "displayName": "Мероприятия"
+    "displayName": "Мероприятия",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,20 @@
       "type": "string"
     },
     "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "countSlides": {
+      "type": "string"
+    },
+    "presentation": {
       "allowedTypes": [
         "images",
         "files",
@@ -23,9 +38,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "countSlides": {
-      "type": "string"
     }
   }
 }

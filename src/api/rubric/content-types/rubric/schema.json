@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "sotrudnichestvos",
+  "collectionName": "rubrics",
   "info": {
-    "singularName": "sotrudnichestvo",
-    "pluralName": "sotrudnichestvos",
-    "displayName": "Сотрудничество",
+    "singularName": "rubric",
+    "pluralName": "rubrics",
+    "displayName": "Рубрика \"Две полоски\"",
     "description": ""
   },
   "options": {
@@ -26,18 +26,8 @@
         "audios"
       ]
     },
-    "countSlides": {
+    "link": {
       "type": "string"
-    },
-    "presentation": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }
