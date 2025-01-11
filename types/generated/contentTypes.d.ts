@@ -548,6 +548,34 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiQrCodeQrCode extends Struct.SingleTypeSchema {
+  collectionName: 'qr_codes';
+  info: {
+    displayName: 'qr-code';
+    pluralName: 'qr-codes';
+    singularName: 'qr-code';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::qr-code.qr-code'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    qr: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRubricRubric extends Struct.CollectionTypeSchema {
   collectionName: 'rubrics';
   info: {
@@ -1187,6 +1215,7 @@ declare module '@strapi/strapi' {
       'api::gallerykid.gallerykid': ApiGallerykidGallerykid;
       'api::ivent.ivent': ApiIventIvent;
       'api::project.project': ApiProjectProject;
+      'api::qr-code.qr-code': ApiQrCodeQrCode;
       'api::rubric.rubric': ApiRubricRubric;
       'api::savekid.savekid': ApiSavekidSavekid;
       'api::slide.slide': ApiSlideSlide;
